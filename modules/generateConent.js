@@ -1,4 +1,7 @@
 const makeHeading = require("./makeHeading");
+const makeUUID = require("./log_uuid");
+const randomColor = require('randomcolor');
+
 const navigation = `
     <nav>
         <span><a href="?page=home">Home</a></span>
@@ -27,6 +30,8 @@ let generateContent = ({page, additional,count})=>{
                 </ul>
                 <footer>
                     copyleft 2020
+
+                    <h1 style=background-color:${randomColor()}> Your user ID is ${makeUUID()}</h1>
                 </footer>
             </body>
         </html>
